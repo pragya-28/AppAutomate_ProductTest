@@ -39,4 +39,4 @@ for i in desired_cap:
     #driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
 
 time.sleep(10)
-driver.quit()
+#driver.quit()
