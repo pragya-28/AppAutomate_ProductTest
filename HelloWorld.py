@@ -14,6 +14,6 @@ desired_cap = {
     "platformName" : "android",
     "platformVersion" : "9.0",
     "deviceName" : "Google Pixel 3",
-    "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
+    "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
     'build': build_name
 }
