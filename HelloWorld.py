@@ -10,13 +10,29 @@ user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 build_name = os.environ.get("JENKINS_LABEL", "0")
 
-desired_cap = {
+desired_cap = [{
     "platformName" : "android",
     "platformVersion" : "9.0",
-    "deviceName" : "Google Pixel 3",
+    "deviceName" : "Google Pixel 7 Pro",
+    "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
+    'build': build_name
+},
+    desired_cap = {
+    "platformName" : "android",
+    "platformVersion" : "13.0",
+    "deviceName" : "Samsung Galaxy S23 Ultra",
+    "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
+    'build': build_name
+},
+    desired_cap = {
+    "platformName" : "android",
+    "platformVersion" : "11.0",
+    "deviceName" : "OnePlus 9",
     "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
     'build': build_name
 }
+]
+
 driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
 time.sleep(10)
 driver.quit()
