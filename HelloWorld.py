@@ -17,3 +17,6 @@ desired_cap = {
     "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
     'build': build_name
 }
+driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
+time.sleep(10)
+driver.quit()
