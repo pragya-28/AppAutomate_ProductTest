@@ -8,7 +8,7 @@ import time
 
 user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
-build_name = os.environ.get("JENKINS_LABEL", "0")
+build_name = os.environ.get("JENKINS_LABEL", "LABEL Not Defined")
 
 desired_cap = [
 {
