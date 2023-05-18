@@ -13,7 +13,7 @@ build_name = os.environ.get("JENKINS_LABEL", "0")
 desired_cap = [
 {
     "platformName" : "android",
-    "platformVersion" : "9.0",
+    "platformVersion" : "13.0",
     "deviceName" : "Google Pixel 7 Pro",
     "app" : "bs://f9529d2e64d5fb2183d28680ff7e3af0b4a2ea47",
     'build': build_name
