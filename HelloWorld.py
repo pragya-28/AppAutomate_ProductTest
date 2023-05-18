@@ -36,7 +36,7 @@ desired_cap = [
 
 for i in desired_cap:
     print(i['deviceName'])
-    driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
+    driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", i)
 
 time.sleep(10)
 driver.quit()
