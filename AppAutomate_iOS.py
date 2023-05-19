@@ -1,3 +1,4 @@
+import selenium
 import os
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
