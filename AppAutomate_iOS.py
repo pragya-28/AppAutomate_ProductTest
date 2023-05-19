@@ -11,7 +11,7 @@ access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 build_name = os.environ.get("JENKINS_LABEL", "0")
 
 desired_cap = {
-    "platformName" : "android",
+    "platformName" : "ios",
     "platformVersion" : "16.0",
     "deviceName" : "iPhone 14",
     "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
