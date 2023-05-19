@@ -10,15 +10,15 @@ user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 build_name = os.environ.get("JENKINS_LABEL", "0")
 
-# desired_cap = {
-#     "platformName" : "ios",
-#     "platformVersion" : "16.0",
-#     "deviceName" : "iPhone 14",
-#     "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
-#     'build': build_name
-# }
+desired_cap = {
+    "platformName" : "ios",
+    "platformVersion" : "16.0",
+    "deviceName" : "iPhone 14",
+    "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
+    'build': build_name
+}
 
-driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub")
+driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub",desired_cap)
 
 # search_element = WebDriverWait(driver, 30).until(
 #     EC.element_to_be_clickable((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia"))
