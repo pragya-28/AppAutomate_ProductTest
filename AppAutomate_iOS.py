@@ -23,11 +23,10 @@ options = XCUITestOptions().load_capabilities({
     "deviceName" : "iPhone 14 Pro Max",
     "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
     'build': build_name
-}
-)
+})
 
 for i in options:
-	driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", options=options[i])
+	driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", options= i)
 
 # Test case for the BrowserStack sample iOS app.
 # If you have uploaded your app, update the test case here. 
