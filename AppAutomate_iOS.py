@@ -26,7 +26,8 @@ options = XCUITestOptions().load_capabilities({
 }
 )
 
-driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", options=options)
+for i in options
+driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", options=options[i])
 
 # Test case for the BrowserStack sample iOS app.
 # If you have uploaded your app, update the test case here. 
