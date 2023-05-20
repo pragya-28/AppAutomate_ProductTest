@@ -45,4 +45,7 @@ for i in caps:
     else:
         assert False
     driver.quit()
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac90f73 (iOS capabilities)
