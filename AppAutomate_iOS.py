@@ -10,7 +10,7 @@ user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 build_name = os.environ.get("JENKINS_LABEL", "0")
 
-caps = {
+caps = [{
     "platformName" : "ios",
     "platformVersion" : "16.0",
     "deviceName" : "iPhone 14",
@@ -23,7 +23,7 @@ caps = {
     "deviceName" : "iPhone 14 Pro Max",
     "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
     'build': build_name
-}
+}]
 
 for i in caps:
     print(i)
