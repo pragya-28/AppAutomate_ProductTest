@@ -26,6 +26,7 @@ caps = {
 }
 
 for i in caps:
+    print(i)
     options = XCUITestOptions().load_capabilities(i)
     driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", options=options)
     text_button = WebDriverWait(driver, 30).until(
