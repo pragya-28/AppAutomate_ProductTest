@@ -20,10 +20,18 @@ caps = [{
 {
     "platformName" : "ios",
     "platformVersion" : "16.0",
-    "deviceName" : "iPhone 14 Pro Max",
+    "deviceName" : "iPhone 12 Mini",
     "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
     'build': build_name
-}]
+},
+{
+    "platformName" : "ios",
+    "platformVersion" : "16.0",
+    "deviceName" : "iPhone 14 pro Max",
+    "app" : "bs://a3129b2292fe6e8544f151efa019555ab058ac97",
+    'build': build_name
+}
+]
 
 for i in caps:
     print(i)
