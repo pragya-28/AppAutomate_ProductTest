@@ -10,15 +10,31 @@ user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 build_name = os.environ.get("JENKINS_LABEL", "0")
 
-desired_cap = {
+desired_cap = [{
     "platformName" : "android",
     "platformVersion" : "9.0",
     "deviceName" : "Google Pixel 3",
     "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
     'build': build_name
+},
+{
+    "platformName" : "android",
+    "platformVersion" : "12.0",
+    "deviceName" : "Samsung Galaxy Tab S8",
+    "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
+    'build': build_name
+},
+{
+    "platformName" : "android",
+    "platformVersion" : "13.0",
+    "deviceName" : "Samsung Galaxy S23 Ultra",
+    "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
+    'build': build_name
 }
+]
 
-driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
+for i in desired_cap:
+    driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", i)
 
 search_element = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia"))
