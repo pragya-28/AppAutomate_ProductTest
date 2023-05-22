@@ -8,7 +8,7 @@ import time
 
 user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
-build_name = os.environ.get("JENKINS_LABEL", "LABEL Not Defined")
+build_name = os.environ.get("JENKINS_LABEL", "HelloWorld Android App")
 
 desired_cap = [
 {

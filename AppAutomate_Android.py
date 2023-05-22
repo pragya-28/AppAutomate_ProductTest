@@ -8,7 +8,7 @@ import time
 
 user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
-build_name = os.environ.get("JENKINS_LABEL", "0")
+build_name = os.environ.get("JENKINS_LABEL", "Android Devices:Wikipedia")
 
 desired_cap = [{
     "platformName" : "android",
@@ -19,8 +19,8 @@ desired_cap = [{
 },
 {
     "platformName" : "android",
-    "platformVersion" : "12.0",
-    "deviceName" : "Samsung Galaxy Tab S8",
+    "platformVersion" : "11.0",
+    "deviceName" : "OnePlus 9",
     "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
     'build': build_name
 },
