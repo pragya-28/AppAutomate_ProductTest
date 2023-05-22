@@ -12,15 +12,15 @@ build_name = os.environ.get("JENKINS_LABEL", "Android Devices:Wikipedia")
 
 desired_cap = [{
     "platformName" : "android",
-    "platformVersion" : "9.0",
-    "deviceName" : "Google Pixel 3",
+    "platformVersion" : "13.0",
+    "deviceName" : "Google Pixel 7 Pro",
     "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
     'build': build_name
 },
 {
     "platformName" : "android",
     "platformVersion" : "11.0",
-    "deviceName" : "OnePlus 9",
+    "deviceName" : "Xiaomi Redmi Note 11",
     "app" : "bs://9efe81dd25c709c3d1561af7f1ad3a086963f370",
     'build': build_name
 },
